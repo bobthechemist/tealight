@@ -1,0 +1,4 @@
+#!/bin/sh
+# The PWD is a parameter expansion which takes the last directory of a tree
+# The name of the hex file is apparently generated from this value
+avrdude -p attiny85 -c gpio -e -U flash:w:build-cli/${PWD##*/}.hex
